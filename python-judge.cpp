@@ -29,7 +29,7 @@ feedback_t python_judge(arg_t argument) {
   Py_Finalize();
   fclose(stdout);
 
-  //答案存入resultstring中以供检查
+  //缁涙梹顢嶇€涙ê鍙唕esultstring娑擃厺浜掓笟娑欘梾閺岋拷
   std::string resultstring;
   char buf;
   auto result = fopen(resultname, "r");
@@ -51,11 +51,11 @@ feedback_t python_judge(arg_t argument) {
   return feedback;
 }
 
-// int main(){
-//   arg_t arg{
-//     .timelimit = 0.1,
-//     .key = "yes"
-//   };
-//   std::cerr  << python_judge(arg).out_of_time <<std::endl;
-//   return 0;
-// }
+int main(){
+  arg_t arg{
+    .timelimit = 0.1,
+    .key = "yes"
+  };
+  std::cerr  << python_judge(arg).out_of_time <<std::endl;
+  return 0;
+}
